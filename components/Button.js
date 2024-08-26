@@ -15,13 +15,13 @@ export default function Button({ label, theme }) {
       >
         <Pressable
           style={[styles.button, { backgroundColor: "#fff" }]}
-          onPress={() => handlePress}
+          onPress={() => handlePress()}
         >
           <FontAwesome
             name="picture-o"
             size={18}
             color={"#25292e"}
-            style={stylebuttonIcon}
+            style={styles.buttonIcon}
           >
             <Text style={[styles.buttonLabel, { color: "#25292e" }]}>
               {label}
@@ -33,7 +33,7 @@ export default function Button({ label, theme }) {
   }
   return (
     <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => handlePress}>
+      <Pressable style={styles.button} onPress={() => handlePress()}>
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
     </View>
@@ -56,9 +56,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
-    borderColor: "white",
-    borderWidth: 1,
-    borderStyle: "solid",
   },
   buttonIcon: {
     paddingRight: 8,
