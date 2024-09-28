@@ -51,7 +51,7 @@ export default function App() {
 
   const onSaveImageAsync = async () => {
     try {
-      const localUrl = captureRef(imageRef, {
+      const localUrl = await captureRef(imageRef, {
         height: 440,
         quality: 1,
       });
